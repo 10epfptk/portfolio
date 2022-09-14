@@ -22,7 +22,24 @@
             .page-section .row .img1{
                 z-index: 2;
             }
+            .cursur{
+                cursor: pointer;
+            }
+             .btnblack{
+                color: black;
+            } 
         </style>
+        <script>
+            function companyopen(){
+                window.open("https://10epfptk.github.io/portfolio/company/","company","width=1400,height=1000,left=300,top=50")
+            }
+            function nikeopen(){
+                window.open("https://10epfptk.github.io/portfolio/nikesoccer/","nikesoccer","width=1400,height=1000,left=300,top=50")
+            }
+            function haksaopen(){
+                window.open("https://www.youtube.com/watch?v=lm38k8ZC4TE&ab_channel=%ED%95%9C%EC%A4%80%ED%9D%AC","nikesoccer","width=1400,height=1000,left=300,top=50")
+            }
+        </script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -35,7 +52,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Introduce">Introduce Myself</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
@@ -55,11 +72,11 @@
         </header>
 
         <!-- Services-->
-        <section class="page-section" id="services">
+        <section class="page-section" id="Introduce">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">Introduce Myself</h3>
+                    <h2 class="section-heading text-uppercase">Introduce Myself</h2>
+                    <h3 class="section-subheading text-muted">These are the skills I`m learning</h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
@@ -428,17 +445,16 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">학사 관리</h2>
                                     <p class="item-intro text-muted">학사 관리 프로그램</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/haksa.png" alt="..." />
-                                    <p>Java와 Oracle을 이용해서 만든 학사 관리 프로그램</p>
-                                    <!-- <ul class="list-inline">
-                                        <li>
-                                            Java
-                                        </li>
-                                        <li>
-                                            Oracle
-                                        </li>
-                                    </ul> -->
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <a class="portfolio-link" data-bs-toggle="modal" onclick="haksaopen();">
+                                    <img class="img-fluid d-block mx-auto cursur" src="assets/img/portfolio/haksa.png" alt="..." />
+                                    </a>
+                                    <p>Java / Oracle을 이용해서 만든 학사 관리 프로그램</p>
+                                    <ul class="list-inline">
+                                     <li>
+                                        <strong>Click the picture</strong>
+                                     </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase btnblack" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
                                     </button>
@@ -461,19 +477,16 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">NIKE</h2>
                                     <p class="item-intro text-muted">나이키 축구화 사이트</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/nike.jpg" alt="..." />
-                                    <p>HTML5 CSS3를 이용한 나이키 축구화 사이트</p>
-                                    <!-- <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Explore
+                                    <a class="portfolio-link" data-bs-toggle="modal" onclick="nikeopen();">
+                                    <img class="img-fluid d-block mx-auto cursur" src="assets/img/portfolio/nike.jpg" alt="..." />
+                                    </a>
+                                    <p>HTML5 / CSS3를 이용한 나이키 축구화 사이트</p>
+                                    <ul class="list-inline">
+                                       <li>
+                                            <strong>Click the picture</strong>
                                         </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Graphic Design
-                                        </li>
-                                    </ul> -->
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase btnblack" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
                                     </button>
@@ -496,19 +509,16 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">COMPANY</h2>
                                     <p class="item-intro text-muted">TIS 회사</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/company.jpg" alt="..." />
-                                    <p>HTML5 CSS3 BOOTSTRAP JAVASCRIPT를 이용한 TIS회사</p>
-                                    <!-- <ul class="list-inline">
+                                    <a class="portfolio-link" data-bs-toggle="modal" onclick="companyopen();">
+                                    <img class="img-fluid d-block mx-auto cursur" src="assets/img/portfolio/company.jpg" alt="..." />
+                                    </a>
+                                    <p>HTML5 / CSS3 / BOOTSTRAP / JAVASCRIPT를 이용한 TIS회사</p>
+                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Finish
+                                            <strong>Click the picture</strong>
                                         </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Identity
-                                        </li>
-                                    </ul> -->
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    </ul> 
+                                    <button class="btn btn-primary btn-xl text-uppercase btnblack" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
                                     </button>
@@ -543,7 +553,7 @@
                                             Branding
                                         </li>
                                     </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-primary btn-xl text-uppercase btnblack" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
                                     </button>
@@ -578,7 +588,7 @@
                                             Website Design
                                         </li>
                                     </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-primary btn-xl text-uppercase btnblack" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
                                     </button>
@@ -613,7 +623,7 @@
                                             Photography
                                         </li>
                                     </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-primary btn-xl text-uppercase btnblack" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
                                     </button>
