@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Genesis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x_icon" href="img/caricon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    *{
+      list-style: none;
+    }
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+    background: #111;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #777;
+  }
+  .logo{
+    position: absolute;
+    top: 10px;
+  }
+  .container {
+    padding: 80px 0;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 1;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner{
+    background-color: #111;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption{
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 600px) {
+    .carousel-caption{
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .item h1{
+    margin-top: 0;
+  }
+  .p-group{
+    position: absolute;
+    bottom: 20%;
+    left: 13%;
+    display: flex;
+    color: white;
+    z-index: 10;
+  }
+  @media (max-width: 600px) {
+    .p-group{
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .p-group p{
+    margin-right: 30px;
+  }
+  .p-group .p1:hover{
+    cursor: pointer;
+    border-bottom: 1px solid white;
+  }
+  .event{
+    background-color:#2d2d30 ;
+  }
+  .text-box{
+    padding-top: 30px;
+    margin-left: 40px;
+    text-align: center;
+  }
+  .text-box a{
+    text-decoration: none;
+    color: #777;
+  }
+  .text-box a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+
+  .bg-1 {
+    background: #111;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+
+  .item{
+    text-align: center;
+    padding-bottom: 70px;
+  }
+  .item:hover img,strong{
+    cursor: pointer;
+  }
+
+  #contents h1{
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+
+  .row img{
+    width: 100%;
+  }
+
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer .container{
+    padding: 0;
+  }
+  footer .first{
+    display: flex;
+  }
+  footer .icon-group{
+    display: flex;
+  }
+  footer .icon-group li{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  footer .icon-group li i{
+    color: #808080;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  footer a {
+    float: right;
+    color: #f5f5f5;
+   
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .second{
+    display: flex;
+  }
+  .second .text{
+    display: flex;
+  }
+  .second .text li{
+    padding-right: 10px;
+    margin-left: 10px;
+    border-right: 1px solid #777;
+    cursor: pointer;
+  }
+  .second .text .color{
+    color: #C36F51;
+  }
+  .second .text li:nth-child(7){
+    border: none;
+  }
+  .second .icon-group2{
+    display: flex;
+  }
+  .second .icon-group2 li{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .second .icon-group2 li i{
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"><img src="img/logo.png" alt="logo" class="logo"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#models">MODELS</a></li>
+        <li><a href="#event-page">EVENT</a></li>
+        <li><a href="#travel">TRAVEL</a></li>
+        <li><a href="#contents">CONTENTS</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="img/main1.jpg" alt="genesis" width="1200" height="700">
+        <div class="carousel-caption">
+          <p>GENESIS</p>
+          <h1>G70 SHOOTING BRAKE</h1>
+          <p>온전히 나답게</p>
+        </div>
+        <div class="p-group">
+            <p class="p1">더 알아보기 ></p>
+            <p class="p1">견적내기 ></p>
+        </div>  
+      </div>
+
+      <div class="item">
+        <img src="img/main2.jpg" alt="genesis" width="1200" height="700">
+        <div class="carousel-caption">
+            <p>GENESIS</p>
+            <h1>G70</h1>
+            <p>2022년형 출시</p>
+        </div>
+        <div class="p-group">
+          <p class="p1">더 알아보기 ></p>
+          <p class="p1">견적내기 ></p>
+      </div>       
+      </div>
+    
+      <div class="item">
+        <img src="img/main3.jpg" alt="genesis" width="1200" height="700">
+        <div class="carousel-caption">
+            <p>ELECTRIFIED</p>
+            <h1>GV70</h1>
+            <p>또 다른 감동을 충전하는 시간</p>
+        </div>   
+        <div class="p-group">
+          <p class="p1">더 알아보기 ></p>
+          <p class="p1">견적내기 ></p>
+      </div>    
+      </div>
+    
+
+    <div class="item">
+        <img src="img/main4.jpg" alt="genesis" width="1200" height="700">
+        <div class="carousel-caption">
+            <p>GENESIS</p>
+            <h1>G90</h1>
+            <p>한국자동차기자협회 2022 올해의 차 수상</p>
+        </div>  
+        <div class="p-group">
+          <p class="p1">더 알아보기 ></p>
+          <p class="p1">견적내기 ></p>
+      </div>     
+      </div>
+    
+
+    <div class="item">
+        <img src="img/main5.jpg" alt="genesis" width="1200" height="700">
+        <div class="carousel-caption">
+            <p>GENESIS</p>
+            <h1>GV60</h1>
+            <p>당신과의 교감을 위해</p>
+        </div>
+        <div class="p-group">
+          <p class="p1">더 알아보기 ></p>
+          <p class="p1">견적내기 ></p>
+      </div>       
+      </div>
+    
+    <div class="item">
+        <img src="img/main6.jpg" alt="genesis" width="1200" height="700">
+        <div class="carousel-caption">
+            <p>미래를 향한 대담한 비전</p>
+          <h1>FUTURING GENESIS</h1>
+        </div>     
+      </div>
+
+    <div class="item">
+        <img src="img/main7.jpg" alt="genesis" width="1200" height="700">
+        <div class="carousel-caption">
+            <p>ELECTRIFIED</p>
+          <h1>G80</h1>
+          <p>전기차 그 이상의 시작</p>
+        </div> 
+        <div class="p-group">
+          <p class="p1">더 알아보기 ></p>
+          <p class="p1">견적내기 ></p>
+      </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (The models Section) -->
+<div id="models" class="container text-center">
+  <h3>Our Models</h3>
+  <p><em>역동적이면서도 우아한 디자인과 최첨단 기술을 탑재한 제네시스 브랜드의 라인업을 살펴보세요.<br>
+  이미지를 눌러보세요.</em></p>
+  <br>
+  <div class="row">
+    <div class=" col-md-4">
+      <p class="text-center"><strong>G80</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="img/car1.png" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>ELECTRIFIED</p>
+        <p>이 차는 22분이면 80% 충전될 수 있어</p>
+        <p>첨단 운전자 보조 시스템</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <p class="text-center"><strong>G70</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="img/car2.png" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>The NEW GENESIS</p>
+        <p>타협 없는 안전성</p>
+        <p>드라이빙의 즐거움</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <p class="text-center"><strong>G70</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="img/car3.png" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>스타일리쉬한 측면부와 날렵한 후면부 디자인</p>
+        <p>다재다능한 공간</p>
+        <p>Build Your Genesis</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/event -->
+<div class="event" id="event-page">
+  <div class="text-box">
+    <h1>Genesis Events</h1>
+    <h2>제네시스에서 진행중인 다양한 이벤트를 소개합니다.</h2>
+    <p class="event-button"><a>이벤트 보기</a></p>
+    </div>
+  <img src="img/event.jpg" class="img-responsive" style="width:100%">
+  </div>
+
+<!-- travel (Contact Section) -->
+<div id="travel" class="container">
+  <h3 class="text-center">TRAVEL</h3>
+  <p class="text-center"><em>Go on a trip with Genesis</em></p>
+
+  <div class="row">
+    <div class="col-md-6">
+      <img src="img/travel1.jpg" alt="img">
+      <h3>스페이스</h3>
+      <p>제네시스의 디자인과 고유한 감각을 반영한 현대적 공간으로 여러분을 초대합니다. 제네시스에 관한 다양한 체험으로 당신만의 제네시스를 찾는 여정을 지원합니다.</p>
+      <button class="btn">자세히 보기</button>
+    </div>
+    <div class="col-md-6">
+      <img src="img/travel2.jpg" alt="img">
+      <h3>로드트립</h3>
+      <p>제네시스와 내셔널지오그래픽 트래블러와 함께하는 서사적 여행, 제네시스 로드트립을 통해 자세한 정보를 확인하세요.</p>
+      <button class="btn">자세히 보기</button>
+    </div>
+  </div>
+</div>
+
+<!-- Container (contents Section) -->
+<div id="contents" class="bg-1">
+  <div class="container">
+    <h1> CONTENTS</h1>
+    <div class="col-sm-3">
+      <div class="item">
+        <img src="img/item1.gif" alt="Paris" width="60" height="60">
+        <p><strong>견적내기</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="item">
+        <img src="img/item2.gif" alt="Paris" width="60" height="60">
+        <p><strong>구매 상담 신청</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="item">
+        <img src="img/item3.gif" alt="Paris" width="60" height="60">
+        <p><strong>시승 신청</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="item">
+        <img src="img/item4.gif" alt="Paris" width="60" height="60">
+        <p><strong>카탈로그</strong></p>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/contents1.jpg" alt="Paris" width="400" height="300">
+          <p><strong>이벤트</strong></p>
+          <p>제네시스에서 진행중인 다양한 이벤트 정보를 전해 드립니다.</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">자세히 보기</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/contents2.jpg" alt="New York" width="400" height="300">
+          <p><strong>디지털 서비스</strong></p>
+          <p>제네시스의 디지털 서비스는 첨단 신기술로 당신과 차가 함께 하는 일상에 편리함을 한층 더해줍니다. </p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">자세히 보기</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/contents3.jpg" alt="San Francisco" width="400" height="300">
+          <p><strong>멤버스</strong></p>
+          <p>제네시스 오너분들께만 주어지는 특별한 혜택과 이상적인 경험을 선사합니다.</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">자세히 보기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <!-- Modal -->
+   <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <!--footer first-->
+  <div class="container first">
+    <ul class="icon-group">
+      <li>Share</li>
+      <li><i class="fa-brands fa-facebook-f"></i></li>
+      <li><i class="fa-brands fa-twitter"></i></li>
+      <li><i class="fa-solid fa-link"></i></li>
+    </ul>
+    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+      <span class="glyphicon glyphicon-chevron-up"> TOP</span>
+      </a>
+  </div>
+
+  <!--footer second-->
+  <div class="container second">
+    <ul class="text">
+      <li>사이트맵</li>
+      <li>이용약관</li>
+      <li class="color">개인정보 처리방침</li>
+      <li>저작권 안내</li>
+      <li>보증안내</li>
+      <li>자동차 교환 및 환불 중재 규정 안내</li>
+      <li>하자 재발 통보 안내</li>
+    </ul>
+    <ul class="icon-group2">
+      <li><i class="fa-brands fa-facebook-f"></i></li>
+      <li><i class="fa-brands fa-instagram"></i></li>
+      <li><i class="fa-brands fa-youtube"></i></li>
+    </ul>
+  </div>
+
+    <div class="footer_bottom">
+      <img src="img/footer-logo.png" alt="logo">
+      <p>© Copyright 2022 Hyundai Motor Company.</p>
+      <p>All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+<script>
+$(document).ready(function(){
+
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+</body>
+</html>
