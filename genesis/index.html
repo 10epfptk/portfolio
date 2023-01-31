@@ -12,9 +12,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
   <style>
     *{
       list-style: none;
+      position: relative;
     }
   body {
     font: 400 15px/1.8 Lato, sans-serif;
@@ -35,14 +38,14 @@
     padding: 80px 0;
   }
   .person {
-    border: 10px solid transparent;
+    border: 3px solid transparent;
     margin-bottom: 25px;
     width: 80%;
     height: 80%;
     opacity: 1;
   }
   .person:hover {
-    border-color: #f1f1f1;
+    border-color: gray;
   }
   .carousel-inner{
     background-color: #111;
@@ -206,6 +209,143 @@
     width: 100%;
   }
 
+/*section2 동영상*/
+.section2{width: 100%; height: 100vh; position: relative;}
+.section2 .img-text{position: absolute; top: 0; left: 0;}
+.section2 .img-text img{width: 100%;height: 100%;}
+.section2 .img-text i{color: white; display: flex; justify-content: center; top: 44%; position: relative;}
+.section2 .img-text span{position: absolute; top: 44%; left: 46%; 
+width: 150px;
+ height: 150px;
+border: 1px solid rgba(255,255,255,0.3); border-radius: 50%;}
+
+@media(max-width:768px){
+    .section2{width: 750px; height: 421px;}
+}
+
+/*section4*/
+.section4{width: 100%; height: 100vh;}
+.section4 .up{margin-bottom: 100px;}
+.section4 .up h1{color: white; text-align: center; padding-top: 160px; font-size: 42px;}
+.section4 .up p{color: wheat; text-align: center;  font-size: 16px;}
+.section4 .down{width: 100%; height: 100vh; display: flex; 
+margin: 0 auto;}
+.section4 .down .box{width: 308px; height: 356px; padding: 27px 30px 39px; margin-left: 10px; margin-right: 10px;
+background-color: black; margin: 0 auto; cursor: pointer;}
+
+.section4 .down .box .bor{border: 1px solid white; 
+color: white; padding: 20px 80px;
+top: 40%; left: 10%;}
+.section4 .down .box .bor:hover{background-color: white; color: black; 
+transition: 0.5s;}
+
+.section4 .down .img4{width: 265px; height: 101px; margin-top: 35px;}
+.section4 .down .img4 img{width: 100%; top: 50%;}
+
+.section4 .down .box:hover p{color:wheat; }
+.section4 .down .box1 p{color:white; position: absolute; top:20px; left: 30px;}
+.section4 .down .box2 p{color:white; position: absolute; top:20px; left: 30px;}
+.section4 .down .box3 .pp{color: white; position: absolute; top: 5px; left: 30px;}
+.section4 .down .box3 p{color:white; position: absolute; top:20px; left: 30px;}
+.section4 .down .box4 p{color:white; position: absolute; top:20px; left: 30px;}
+   
+@media(max-width:1360px){
+    .section4 .down .box{width: 250px; height: 250px; margin: 0 auto;}
+}
+@media(max-width:1270px){
+    .section4 .down .box4{display: none;}
+}
+@media(max-width:768px){
+    .section4 .down .box1{width: 750px; height: 534px;}
+    .section4 .down .box1 p{font-size: 25px;}
+    .section4 .down .box1 img{width: 690px; height: 262px;}
+    .section4 .down .box1 .bor{padding: 25px 270px;  left: 0; top: 300px;}
+    .section4 .down .box2{display: none;}
+    .section4 .down .box3{display: none;}
+}
+
+/* section5  awards */
+.section5 .section5-text {width: 750px; height: 300px; position: absolute; top: 300px;}
+   .section5 .section5-text h2{position: absolute; color: wheat; font-size: 32px;
+    left: 100px;}
+   .section5  .section5-text p{position: absolute; color: white; font-size: 16px;
+   top: 100px; left: 100px;margin-top: 50px;}
+
+/*section6 스페이스 로드트립*/
+.section6{width: 100%;height: 100vh; display: flex; justify-content: center;
+align-items: center;}
+.section6 .left{width: 50%; margin-right: 20px;}
+.section6 .left img{width: 100%; opacity: 0.5;}
+.section6 .text-group{position: absolute; top: 10%; left: 5%;
+color: white;}
+.section6 .text-group h1{margin-bottom: 10px; font-size: 42px;}
+.section6 .text-group p{font-size: 14px; margin-bottom: 21px;}
+.section6 .text-group a{color: white; font-size: 16px;}
+.section6 .right{width: 50%;}
+.section6 .right img{width: 100%; opacity: 0.5;}
+
+@media(max-width:1360px){
+    .section6 .text-group h1{font-size: 20px;}
+    .section6 .text-group p{font-size: 12px;}
+    .section6 .text-group a{font-size: 12px;}
+}
+@media(max-width:1025px){
+    .section6{margin-top: 100px;}
+    .section6 .left img{width: 491px; height: 654px;}
+    .section6 .right img{width: 491px; height: 654px;}
+}
+
+
+/*section7 제네시스 이벤트*/
+.section7{width: 100%; height: 100vh;}
+.section7 img{width: 100%; height: 100%;}
+.section7 .text-group{position: absolute; top: 35%;left: 8%;}
+.section7 .text-group h1{font-size: 54px;}
+.section7 .text-group p{font-size: 26px; margin-top: 30px; margin-bottom: 30px;}
+.section7 .text-group button{padding:15px 80px;}
+
+
+/*section8*/
+.section8{width: 100%;height: 100vh; padding-bottom: 240px;}
+.section8 .up{text-align: center; color: white;padding-top: 160px;
+margin-bottom: 68px;}
+.section8 .up p{font-size: 18px;}
+.section8 .up h1{font-size: 54px;}
+
+.section8 .center{display: flex;width: 100%;}
+.section8 .center .first{width: 33.3%; overflow: hidden;}
+.section8 .center .first:hover .text-hover{display: block;}
+.section8 .center .first:hover img{transform: scale(1.5); transition: 0.5s;}
+.section8 .center .first img{width: 100%;}
+.section8 .center .first .text-hover{color: white; position: absolute;
+top: 70%; left: 15%; display: none;}
+.section8 .center .second{width: 33.3%; overflow: hidden;
+margin-left: 10px; margin-right: 10px;}
+.section8 .center .second:hover .text-hover{display: block;}
+.section8 .center .second:hover img{transform: scale(1.5); transition: 0.5s;}
+.section8 .center .second img{width: 100%;}
+.section8 .center .second .text-hover{color: white; position: absolute;
+top: 70%; left: 15%; display: none;}
+.section8 .center .third{width: 33.3%; overflow: hidden;}
+.section8 .center .third:hover .text-hover{display: block;}
+.section8 .center .third:hover img{transform: scale(1.5); transition: 0.5s;}
+.section8 .center .third img{width:100%;}
+.section8 .center .third .text-hover{color: white; position: absolute;
+top: 70%; left: 15%; display: none;}
+
+.section8 .down{margin-top: 60px; text-align: center;}
+.section8 .down button{padding: 10px 70px; background-color: black;
+border: 1px solid white; color: white;} 
+.section8 .down button:hover{background-color: white; color: black;}
+
+@media(max-width:767px){
+    .section8{width: 100%;height: 280vh;}
+    .section8 .center{display: block;}
+    .section8 .center .first{width: 100%;}
+    .section8 .center .second{width: 100%;}
+    .section8 .center .third{width: 100%;}
+}
+
   footer {
     background-color: #2d2d30;
     color: #f5f5f5;
@@ -277,6 +417,8 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
+  <!-- navigation -->
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -309,6 +451,7 @@
   </div>
 </nav>
 
+<!-- carousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -423,79 +566,202 @@
     </a>
 </div>
 
-<!-- Container (The models Section) -->
-<div id="models" class="container text-center">
-  <h3>Our Models</h3>
-  <p><em>역동적이면서도 우아한 디자인과 최첨단 기술을 탑재한 제네시스 브랜드의 라인업을 살펴보세요.<br>
-  이미지를 눌러보세요.</em></p>
-  <br>
-  <div class="row">
-    <div class=" col-md-4">
-      <p class="text-center"><strong>G80</strong></p><br>
-      <a href="#demo" data-toggle="collapse">
-        <img src="img/car1.png" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo" class="collapse">
-        <p>ELECTRIFIED</p>
-        <p>이 차는 22분이면 80% 충전될 수 있어</p>
-        <p>첨단 운전자 보조 시스템</p>
+<!-- section 2  동영상-->
+<section class="section2">
+  <div class="img-text">
+      <img src="img/section2.jpg">
+      <span><i class="fas fa-play"></i></span>
+  </div>
+</section>
+
+<!-- section3  fade 이미지-->
+<section class="section3">
+  <div class="single-item">
+      <img src="img/section3-1.jpg" class="section3-img">
+      <img src="img/section3-2.jpg" class="section3-img">
+      <img src="img/section3-3.jpg" class="section3-img">
+      <img src="img/section3-4.jpg" class="section3-img">
+      <img src="img/section3-5.jpg" class="section3-img">
+  </div>
+</section>
+
+<!-- section4  모델들 -->
+
+<section class="section4">
+  <div class="up">
+  <h1>OUR MODELS</h1>
+  <p>역동적이면서도 우아한 디자인과 최첨단 기술을 탑재한 제네시스 브랜드의 라인업을 살펴보세요.</p>
+  </div>
+  <div class="down">
+      <div class="box box1">
+          <div class="img4">
+              <img src="img/section4-1.jpg">
+          </div>
+          <p>G70</p>
+          <span class="bor">자세히 보기</span>
+      </div>
+      <div class="box box2">
+          <div class="img4">
+          <img src="img/section4-2.jpg">
+      </div>
+          <p>G80</p>
+          <span class="bor">자세히 보기</span>
+      </div>
+      <div class="box box3">
+          <div class="img4">
+              <img src="img/section4-3.jpg">
+          </div>
+          <p class="pp">ELECTRIFIED</p>
+          <p>G80</p>
+          <span class="bor">자세히 보기</span>
+      </div>
+      <div class="box box4">
+          <div class="img4">
+              <img src="img/section4-4.jpg">
+          </div>
+          <p>G90</p>
+          <span class="bor">자세히 보기</span>
       </div>
     </div>
-    <div class="col-md-4">
-      <p class="text-center"><strong>G70</strong></p><br>
-      <a href="#demo2" data-toggle="collapse">
-        <img src="img/car2.png" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo2" class="collapse">
-        <p>The NEW GENESIS</p>
-        <p>타협 없는 안전성</p>
-        <p>드라이빙의 즐거움</p>
+  </section>
+
+<!-- section5 awards -->
+<section class="section5">
+  <div class="autoplay">
+    <div>
+      <img src="img/section5.jpg">
+      <div class="section5-text">
+        <h2>2021 IIHS Top Safety <br>Pick+</h2>
+        <p>미국 고속도로 안전보험협회(IIHS)가 가장 안전한 차량에 부여하는 ‘2021 IIHS<br>
+             톱 세이프티 픽 플러스(2021 IIHS Top Safety Pick+)’에 The All New G80가<br>
+            선정 되었습니다.<br>
+            미국 시장에 판매 중인 전 라인업이 IIHS 톱 세이프티 픽 플러스(IIHS Top<br>
+             Safety Pick+)’를 석권(G70, G80, G90, GV80)함으로서, 제네시스의 우수한<br>
+             안전성을 다시 한번 입증 받았습니다.
+          </p>
       </div>
     </div>
-    <div class="col-md-4">
-      <p class="text-center"><strong>G70</strong></p><br>
-      <a href="#demo3" data-toggle="collapse">
-        <img src="img/car3.png" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo3" class="collapse">
-        <p>스타일리쉬한 측면부와 날렵한 후면부 디자인</p>
-        <p>다재다능한 공간</p>
-        <p>Build Your Genesis</p>
+    <div>
+      <img src="img/section5-2.jpg">
+      <div class="section5-text">
+        <h2>한국자동차기자협회,<br> 한국자동차전문기자협회<br>
+          2021 올해의 차 수상
+        </h2>
+          <p>제네시스 THE ALL-NEW G80가 한국자동차기자협회 및<br>
+              한국자동차전문기자협회가 주관하는 ‘2021 올해의 차’로 선정되었습니다.<br>
+              최고의 차량을 만들기 위해 노력하는 제네시스의 행보를 앞으로도<br>
+              지켜봐주세요.
+          </p>
+       </div>
+    </div>
+    <div>
+      <img src="img/section5-3.jpg">
+      <div class="section5-text">
+        <h2>2020 Red Dot<br>Awards</h2>
+        <p>독일 노르트하인 베스트팔렌 디자인센터가 주관하는 세계 3대 디자인상 중<br>
+           하나인 ‘2020 레드 닷 어워드’에서 제네시스가 본상 4개 부문(Interface, Retail<br>
+            and Spatial Communication Design)에서 수상하며 브랜드 우수성을<br>
+           알렸습니다.
+        </p>
       </div>
     </div>
+    <div>
+      <img src="img/section5-4.jpg">
+      <div class="section5-text">
+        <h2>2020 GOOD DESIGN®<br> AWARD</h2> 
+        <p>G80, GV80, 제네시스 인포테인먼트 시스템 카퍼 디자인 테마 3개 제품이<br>
+           미국의 ‘2020 굿디자인® 어워드(2020 Good Design® Award)’에서 운송<br>
+           디자인(Transportation Design) 부문 수상작으로 선정되었습니다.
+        </p>
+      </div>
+    </div>                
   </div>
-</div>
-
-<!-- Image of location/event -->
-<div class="event" id="event-page">
-  <div class="text-box">
-    <h1>Genesis Events</h1>
-    <h2>제네시스에서 진행중인 다양한 이벤트를 소개합니다.</h2>
-    <p class="event-button"><a>이벤트 보기</a></p>
+</section>
+<!-- section6 스페이스 로드트립 -->
+  <section class="section6">
+    <div class="left">
+        <img src="img/section6-1.jpg" alt="#">
+        <div class="text-group">
+        <h1>스페이스</h1>
+        <p>제네시스의 디자인과 고유한 감각을 반영한 현대적 공간으로 여러분을 <br>
+            초대합니다. 제네시스에 관한 다양한 체험으로 당신만의 제네시스를 찾는 <br>
+            여정을 지원합니다.</p>
+            <a href="#">자세히 보기</a>
+        </div>
     </div>
-  <img src="img/event.jpg" class="img-responsive" style="width:100%">
+    <div class="right">
+        <img src="img/section6-2.jpg" alt="#">
+        <div class="text-group">
+        <h1>로드트립</h1>
+        <p>제네시스와 내셔널지오그래픽 트래블러와 함께하는 서사적 여행, 제네시스<br>
+             로드트립을 통해 자세한 정보를 확인하세요.</p>
+            <a href="#">자세히 보기</a>
+        </div>
+    </div>
+</section>
+
+<!-- section7  이벤트 -->
+<section class="section7">
+  <img src="img/section7.jpg" alt="#">
+  <div class="text-group">
+  <h1>Genesis Events</h1>
+      <p>제네시스에서 진행중인 다양한 이벤트를 소개합니다.</p>
+      <button>이벤트 보기</button>
   </div>
+</section>
 
-<!-- travel (Contact Section) -->
-<div id="travel" class="container">
-  <h3 class="text-center">TRAVEL</h3>
-  <p class="text-center"><em>Go on a trip with Genesis</em></p>
-
-  <div class="row">
-    <div class="col-md-6">
-      <img src="img/travel1.jpg" alt="img">
-      <h3>스페이스</h3>
-      <p>제네시스의 디자인과 고유한 감각을 반영한 현대적 공간으로 여러분을 초대합니다. 제네시스에 관한 다양한 체험으로 당신만의 제네시스를 찾는 여정을 지원합니다.</p>
-      <button class="btn">자세히 보기</button>
-    </div>
-    <div class="col-md-6">
-      <img src="img/travel2.jpg" alt="img">
-      <h3>로드트립</h3>
-      <p>제네시스와 내셔널지오그래픽 트래블러와 함께하는 서사적 여행, 제네시스 로드트립을 통해 자세한 정보를 확인하세요.</p>
-      <button class="btn">자세히 보기</button>
-    </div>
+<!-- section 8  인스타-->
+<section class="section8">
+  <div class="up">
+      <div class="text-group">
+          <p>Instagram</p>
+          <h1>Experience Genesis</h1>
+      </div>
   </div>
-</div>
+  <div class="center">
+      <div class="first">
+          <img src="img/section8-1.jpg" alt="#">
+          <div class="text-hover">
+              <i class="fab fa-instagram" class="ins"></i>
+              <p>Begin your days in comfort and elegance with the Genesis<br> G80.
+
+                  #GENESIS #제네시스
+                  #GenesisG80 #제네시스G80 #G80</p>
+                  <span>SEE MORE</span>
+                  <i class="far fa-sticky-note" class="paper"></i>
+          </div>
+      </div>
+      <div class="second">
+          <img src="img/section8-2.jpg" alt="#">
+          <div class="text-hover">
+              <i class="fab fa-instagram" class="ins"></i>
+              <p>Catching your eye as it basks in the morning glow, ready for the day ahead.
+                  The<br> Genesis G80
+                  #GENESIS #제네시스
+                  #GenesisG80 #제네시스G80 #G80
+                  #MelbourneGray #멜버른그레이</p>
+                  <span>SEE MORE</span>
+                  <i class="far fa-sticky-note" class="paper"></i>
+          </div>
+      </div>
+      <div class="third">
+          <img src="img/section8-3.jpg" alt="#">
+          <div class="text-hover">
+              <i class="fab fa-instagram" class="ins"></i>
+              <p>[#MYGENESIS - 📸 @riderxad]
+                  The GV80 proving elegance is our specialty, in both<br>comfort
+                  and technology.  
+                  Share your Genesis moments with #MYGENESIS for a
+                  </p>
+                  <span>SEE MORE</span>
+                  <i class="far fa-sticky-note" class="paper"></i>
+          </div>
+      </div>
+  </div>
+  <div class="down">
+      <button>더보기 +</button>
+  </div>
+</section>
 
 <!-- Container (contents Section) -->
 <div id="contents" class="bg-1">
@@ -555,40 +821,6 @@
   </div>
 </div>
   
-  <!-- Modal -->
-   <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
-        </div>
-        <div class="modal-body">
-          <form role="form">
-            <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
-              <input type="number" class="form-control" id="psw" placeholder="How many?">
-            </div>
-            <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
-            </div>
-              <button type="submit" class="btn btn-block">Pay 
-                <span class="glyphicon glyphicon-ok"></span>
-              </button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-            <span class="glyphicon glyphicon-remove"></span> Cancel
-          </button>
-          <p>Need <a href="#">help?</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
 
 <!-- Footer -->
 <footer class="text-center">
@@ -630,10 +862,21 @@
     </div>
 </footer>
 
-
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
 
 <script>
 $(document).ready(function(){
+
+  $('.single-item').slick();
+
+  $('.autoplay').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  });
 
   // Initialize Tooltip
   $('[data-toggle="tooltip"]').tooltip(); 
